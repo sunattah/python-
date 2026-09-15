@@ -29,5 +29,13 @@ def input_number():
         else:
             print(f"You win: it is the correct number in {counter} attempts")
             break
+def main_game_loop():
+    while True:
+        
+        input_number()
 
-input_number()
+        play_again = input("\nplay again (y/n) ").strip().lower()
+        if play_again != "y" or play_again != "yes":
+            print("thanks for playing and goodbye")
+            break
+main_game_loop()
