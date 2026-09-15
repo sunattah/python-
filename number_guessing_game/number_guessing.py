@@ -10,25 +10,30 @@ def guess_number(x, y):
                 print(f"Out of range! Please enter a number between {x} and {y}.")
           except ValueError:
             print("invalid number")
-
 def input_number():
     x = 1
     y = 100
     guessing = random.randint(x, y)
     
-    print(f"I am thinking of a number between {x} and {y}.")
-    counter = 0
-    while True:
-        input_guess = guess_number(x,y)
-        counter += 1
+    max_attempts = 5 
+    
+    print(f"\nI am thinking of a number between {x} and {y}.")
+    print(f"You have {max_attempts} attempts to guess it!")
+
+    for attempt in range(max_attempts):
+        print(f"\nAttempt {attempt + 1} of {max_attempts}:")
+        input_guess = guess_number(x, y)
         
         if input_guess < guessing:
             print("lesser number: try again")
         elif input_guess > guessing:
             print("greater number: try again")
         else:
-            print(f"You win: it is the correct number in {counter} attempts")
-            break
+            print("You win: it is the correct number")
+            return
+            
+    print(f"\nGame Over! You ran out of guesses. The correct number was {guessing}.")
+
 def main_game_loop():
     while True:
         
