@@ -1,30 +1,33 @@
-# import random
+import random
 
-def guess_number():
+def guess_number(x, y):
     while True:
-        try:
-            return int(input("enter number: "))
-        except ValueError:
+          try:
+            to_int = int(input("enter number: "))
+            if x <= to_int <= y:
+                return to_int
+            else:
+                print(f"Out of range! Please enter a number between {x} and {y}.")
+          except ValueError:
             print("invalid number")
 
 def input_number():
     x = 1
     y = 100
-    guessing = 42
+    guessing = random.randint(x, y)
     
     print(f"I am thinking of a number between {x} and {y}.")
     counter = 0
     while True:
-        input_guess = guess_number()
+        input_guess = guess_number(x,y)
+        counter += 1
         
         if input_guess < guessing:
-            counter += 1
             print("lesser number: try again")
         elif input_guess > guessing:
             print("greater number: try again")
-            counter += 1
         else:
-            print(f"You win: it is the correct number in {counter}")
+            print(f"You win: it is the correct number in {counter} attempts")
             break
 
 input_number()
