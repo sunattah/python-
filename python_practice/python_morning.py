@@ -1,7 +1,7 @@
 # balance = 7000
 # balance = 7000
 # print(balance * balance)
-
+'''
 def morning_drill():
     first_thing = "1 brush my teeth"
     second_thing = "2 take my bath"
@@ -15,3 +15,4 @@ def done():
     num1 = 1
     print(1, first_thing)
 done()
+'''
