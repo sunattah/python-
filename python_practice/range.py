@@ -13,7 +13,6 @@ def num():
        if i // j == 0:
           print("ok")
           break
-          continue
        if i % j == 0:
           print("wrong")
 num()
