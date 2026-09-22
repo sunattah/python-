@@ -37,6 +37,7 @@ def loop():
         print(write)
 loop()
 def range_loop():
-    good_things = "food", "clothes", "shelter", "car"
-    range_things = range(good_things)
-    print(range_things)
+    good_numbers = range(1, 2, 3,)
+    
+    print(good_numbers)
+range_loop()
