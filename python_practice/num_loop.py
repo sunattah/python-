@@ -36,3 +36,7 @@ def loop():
             return writing_item.title()
         print(write)
 loop()
+def range_loop():
+    good_things = "food", "clothes", "shelter", "car"
+    range_things = range(good_things)
+    print(range_things)
