@@ -24,7 +24,14 @@ know()
 def loop():
      market_list = ["apple", "creyfish", "yam", "potatoes", "fish", "meat"]
      for main_thing in market_list:
-         favorite = main_thing
-         if favorite == main_thing.split():
-             print("It is splited")
+         favorite = main_thing.capitalize()
+         print(favorite)
+loop()
+def loop():
+    school_item = {"writing":"pencil, book, writing book", "package":"Bag, pocket"}
+    for writing_item in school_item:
+        write = writing_item.upper()
+        if not write:
+            return writing_item.title()
+        print(write)
 loop()
