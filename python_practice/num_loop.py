@@ -8,7 +8,7 @@ after_withdrawal = balance - 1000
 print("after withdrawal", after_withdrawal)
 for num in [1,2,4,5,6,78,9]:
     print(num)
-'''
+
 def know():
     y = "positive"
     x = "Negative"
@@ -36,8 +36,9 @@ def loop():
             return writing_item.title()
         print(write)
 loop()
+'''
 def range_loop():
-    good_numbers = range(1, 2, 3,)
-    
-    print(good_numbers)
+    good_numbers = 1, 2, 3, 4, 5
+    for range_things in range(good_numbers):
+        print(range_things)
 range_loop()
