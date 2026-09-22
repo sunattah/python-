@@ -38,7 +38,7 @@ def loop():
 loop()
 '''
 def range_loop():
-    good_numbers = 1, 2, 3, 4, 5
-    for range_things in range(good_numbers):
+    
+    for range_things in range(1, 2, 3):
         print(range_things)
 range_loop()
