@@ -25,5 +25,6 @@ def loop():
      market_list = ["apple", "creyfish", "yam", "potatoes", "fish", "meat"]
      for main_thing in market_list:
          favorite = main_thing
-         print(favorite)
+         if favorite == main_thing.split():
+             print("It is splited")
 loop()
