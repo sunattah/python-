@@ -29,6 +29,7 @@ def loop():
 loop()
 def loop():
     school_item = {"writing":"pencil, book, writing book", "package":"Bag, pocket"}
+    print(school_item)
     for writing_item in school_item:
         write = writing_item.upper()
         if not write:
