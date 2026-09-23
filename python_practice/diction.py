@@ -6,3 +6,5 @@ login_details = {
 print(login_details)
 print(login_details["name"])
 print(login_details.get("number", "Not provided"))
+p = login_details["name"]= "john"
+print(p)
