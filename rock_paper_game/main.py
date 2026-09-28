@@ -49,6 +49,8 @@ def get_player_choice():
         if choice == CHOICES:
             return choice
         # TODO: if choice is valid, return it
+        else:
+            print("loop repeats on its own")
         # TODO: otherwise print a message (loop repeats on its own)
         pass
 
@@ -58,6 +60,8 @@ def get_computer_choice():
     Step 2: return a random item from CHOICES.
     Hint: random.choice() picks an item, unlike randint which picks a number.
     """
+    computer_choice = random.choice(CHOICES)
+    return computer_choice
     # TODO
     pass
 
