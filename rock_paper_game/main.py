@@ -46,8 +46,9 @@ def get_player_choice():
     """
     while True:
         choice = input("rock, paper, or scissors? ").strip().lower()
+        if choice == CHOICES:
+            return choice
         # TODO: if choice is valid, return it
-        if choice 
         # TODO: otherwise print a message (loop repeats on its own)
         pass
 
