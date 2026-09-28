@@ -117,11 +117,16 @@ def main():
     score = {"win": 0, "lose": 0, "tie": 0}
     while True:
         play_round(score)
-        print(f"Score: {score['win']} wins, {score['lose']} losses, {score['tie']} ties")
+        print(f"Score: {score['win']} wins, {score['lose']} losses, {score['tie']} ties\n")
 
-        # TODO: Step 6: ask "play again? (y/n)" and break if the answer is not yes
-        # Careful with your condition: think about `and` vs `or`.
-        pass
+        # Step 6: ask "play again? (y/n)" and break if the answer is not yes
+        again = input("Play again? (y/n): ").strip().lower()
+        
+        # If they type anything other than 'y' or 'yes', break out of the loop
+        if again != 'y' and again != 'yes':
+            print("\nThanks for playing! Final Score:")
+            print(f"{score['win']} Wins | {score['lose']} Losses | {score['tie']} Ties")
+            break
 
 
 if __name__ == "__main__":
