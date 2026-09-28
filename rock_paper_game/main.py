@@ -71,6 +71,10 @@ def decide_winner(player, computer):
     Check the tie first, then use BEATS for the rest.
     """
     # TODO: tie case
+    player = get_player_choice()
+    computer = get_computer_choice()
+    if player == computer:
+        return "tie"
     # TODO: player wins case (use BEATS)
     # TODO: everything else is a loss
     pass
