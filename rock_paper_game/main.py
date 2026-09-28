@@ -32,7 +32,9 @@ CHOICES = ["rock", "paper", "scissors"]
 
 # Step 4: what does each choice defeat?
 # TODO: fill in the dictionary, e.g. "rock": <what rock beats>
-BEATS = {
+BEATS = {"rock":"scissors",
+         "scissors":"paper",
+         
 }
 
 
@@ -45,6 +47,7 @@ def get_player_choice():
     while True:
         choice = input("rock, paper, or scissors? ").strip().lower()
         # TODO: if choice is valid, return it
+        if choice 
         # TODO: otherwise print a message (loop repeats on its own)
         pass
 
