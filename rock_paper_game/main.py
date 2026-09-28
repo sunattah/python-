@@ -74,9 +74,13 @@ def decide_winner(player, computer):
     player = get_player_choice()
     computer = get_computer_choice()
     if player == computer:
-        return "tie"
+        print("tie")
     # TODO: player wins case (use BEATS)
+    if player != computer:
+        print("player win")
     # TODO: everything else is a loss
+    else:
+        print("loss")
     pass
 
 
