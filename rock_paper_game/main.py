@@ -65,23 +65,29 @@ def get_computer_choice():
     # TODO
 
 
+# Assuming this dictionary is defined at the top of your script
+BEATS = {
+    "rock": "scissors",
+    "paper": "rock",
+    "scissors": "paper"
+}
+
 def decide_winner(player, computer):
     """
     Steps 3 and 4: return "tie", "win", or "lose" from the player's view.
     Check the tie first, then use BEATS for the rest.
     """
-    # TODO: tie case
-    player = get_player_choice()
-    computer = get_computer_choice()
+    # 1. Check for a tie first
     if player == computer:
-        print("tie")
-    # TODO: player wins case (use BEATS)
-    if player != computer:
-        print("player win")
-    # TODO: everything else is a loss
-    else:
-        print("loss")
-    pass
+        return "tie"
+        
+    # 2. Check if the player wins using the BEATS dictionary
+    if BEATS[player] == computer:
+        return "win"
+        
+    # 3. If it's not a tie and the player didn't win, the computer won
+    return "lose"
+
 
 
 def play_round(score):
