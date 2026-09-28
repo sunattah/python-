@@ -63,7 +63,6 @@ def get_computer_choice():
     computer_choice = random.choice(CHOICES)
     return computer_choice
     # TODO
-    pass
 
 
 def decide_winner(player, computer):
