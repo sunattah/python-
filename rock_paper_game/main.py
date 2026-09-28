@@ -93,9 +93,19 @@ def play_round(score):
     print(f"You chose {player}, computer chose {computer}.")
 
     result = decide_winner(player, computer)
-    # TODO: Step 5: add 1 to the matching key in `score`
-    # TODO: print a message for the result
-
+    
+    # Step 5: add 1 to the matching key in `score`
+    score[result] += 1
+    
+    # Print a message for the result
+    if result == "win":
+        print("🎉 You won this round!")
+    elif result == "lose":
+        print("😢 The computer won this round.")
+    else:
+        print("🤝 It's a tie!")
+        
+    return score
 
 def main():
     score = {"win": 0, "lose": 0, "tie": 0}
