@@ -1,5 +1,6 @@
 my_list = ("student", "teachers", "staffs", "gateman", "security", "field keeper")
 my_set = set(my_list)
 my_listy = list(my_set)
+print(sorted(my_listy))
 print(my_listy)
 print(my_set)
