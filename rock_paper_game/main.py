@@ -1,17 +1,3 @@
-# def player_choice():
-#     while True:
-#         input_value = input("enter your choice: ")
-#         if input_value == "paper":
-#             print("YOu inputed paper")
-#             if input_value == "scissors":
-#                 print("You inputed scissors")
-#                 break
-#             elif print("invalid input"):
-#                 continue
-
-            
-# player_choice()
-
 """
 Rock, Paper, Scissors
 ---------------------
@@ -21,63 +7,47 @@ Rules:
 - Same choice on both sides is a tie.
 - Keep a running score (wins, losses, ties) across rounds.
 - Ask to play again after each round.
-
-Build it in order. Run and test after each step before moving on.
-Fill in the blanks marked with `# TODO`.
 """
 
 import random
 
+# All valid game choices
 CHOICES = ["rock", "paper", "scissors"]
 
-# Step 4: what does each choice defeat?
-# TODO: fill in the dictionary, e.g. "rock": <what rock beats>
+# Dictionary defining what each choice defeats
 BEATS = {
     "rock": "scissors",
     "paper": "rock",
     "scissors": "paper"
 }
-
 
 
 def get_player_choice():
     """
     Step 1: keep asking until the player types a valid choice.
     Return the choice as a lowercase string.
-    Hint: .strip().lower() cleans the input, `in CHOICES` checks it.
     """
     while True:
         choice = input("rock, paper, or scissors? ").strip().lower()
-        if choice == CHOICES[choice]:
-            if choice in CHOICES:
-             return choice
-        # TODO: if choice is valid, return it
         
-            #  print("loop repeats on its own")
-        # TODO: otherwise print a message (loop repeats on its own)
+        # Correctly check if the choice exists in the list
+        if choice in CHOICES:
+            return choice  # Sends the choice to the game and breaks the loop
+        
+        # If the choice is invalid, print a message and the loop repeats
+        print("Invalid choice! Please type rock, paper, or scissors.")
 
 
 def get_computer_choice():
     """
     Step 2: return a random item from CHOICES.
-    Hint: random.choice() picks an item, unlike randint which picks a number.
     """
-    computer_choice = random.choice(CHOICES)
-    return computer_choice
-    # TODO
+    return random.choice(CHOICES)
 
-
-# Assuming this dictionary is defined at the top of your script
-BEATS = {
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper"
-}
 
 def decide_winner(player, computer):
     """
     Steps 3 and 4: return "tie", "win", or "lose" from the player's view.
-    Check the tie first, then use BEATS for the rest.
     """
     # 1. Check for a tie first
     if player == computer:
@@ -91,10 +61,9 @@ def decide_winner(player, computer):
     return "lose"
 
 
-
 def play_round(score):
     """
-    Play one round and update `score`, a dict like {"win": 0, "lose": 0, "tie": 0}.
+    Play one round and update `score`.
     """
     player = get_player_choice()
     computer = get_computer_choice()
@@ -102,10 +71,8 @@ def play_round(score):
 
     result = decide_winner(player, computer)
     
-    # Step 5: add 1 to the matching key in `score`
     score[result] += 1
     
-    # Print a message for the result
     if result == "win":
         print("🎉 You won this round!")
     elif result == "lose":
@@ -115,16 +82,15 @@ def play_round(score):
         
     return score
 
+
 def main():
     score = {"win": 0, "lose": 0, "tie": 0}
     while True:
         play_round(score)
         print(f"Score: {score['win']} wins, {score['lose']} losses, {score['tie']} ties\n")
 
-        # Step 6: ask "play again? (y/n)" and break if the answer is not yes
         again = input("Play again? (y/n): ").strip().lower()
         
-        # If they type anything other than 'y' or 'yes', break out of the loop
         if again != 'y' and again != 'yes':
             print("\nThanks for playing! Final Score:")
             print(f"{score['win']} Wins | {score['lose']} Losses | {score['tie']} Ties")
