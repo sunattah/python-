@@ -27,10 +27,19 @@ elif green:
     print("Go")
 else:
     print("malfunction")
-'''
+
 is_member = True
 Savings_amount = 100
 if is_member and Savings_amount > 100:
     print("you get a 10%  discount!")
 else:
     print("No discount today")
+    '''
+guest_list = True
+guest_age = 21
+if guest_age < 21:
+    if guest_age == 21 and guest_list == True:
+        print("Entry Denied: Underage")
+    print("you are welcome to the party")
+else:
+    print("Entry Denied: Not on guest list")
