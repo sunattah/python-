@@ -11,7 +11,7 @@ if number < 600:
 password = input("enter your password: ")
 int_pass = str(password)
 if password == int_pass:
-    print("valid password u can proceed")
+    print("Access Granted")
    
 else:
-    print("invalid password")
+    print("Access Denied")
