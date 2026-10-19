@@ -10,7 +10,9 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        # I will write this
+        add_task = input("input the task :  ")
+        tasks.append(add_task)
+        print("Task is added successfully")
         pass
     elif choice == "2":
         # I will write this
