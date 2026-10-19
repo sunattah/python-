@@ -15,6 +15,11 @@ while True:
         print("Task is added successfully")
         pass
     elif choice == "2":
+        if len(tasks) == 0:
+            print("no tasks yet")
+        else:
+            for i, task in enumerate(tasks, start=1):
+                print(f"{i}. {task}")
         # I will write this
         pass
     elif choice == "3":
