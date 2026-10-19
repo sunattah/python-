@@ -20,13 +20,22 @@ while True:
         else:
             for i, task in enumerate(tasks, start=1):
                 print(f"{i}. {task}")
-        # I will write this
         pass
     elif choice == "3":
-        # I will write this
-        pass
-    elif choice == "4":
-        print("Goodbye!")
-        break
+        if len(tasks) == 0:
+            print("Nothing to delete.")
     else:
-        print("Invalid choice, try again.")
+        for i, task in enumerate(tasks, start=1):
+            print(f"{i}. {task}")
+        num = int(input("Enter task number to delete: "))
+        if 1 <= num <= len(tasks):
+            removed = tasks.pop(num - 1)
+            print(f"Deleted: {removed}")
+        else:
+            print("Invalid number.")
+
+    # elif choice == "4":
+    #     print("Goodbye!")
+    #     break
+    # else:
+    # print("Invalid choice, try again.")
