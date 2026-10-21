@@ -17,3 +17,5 @@ while True:
     if choice == "4":
         print("good bye and thank you")
         break
+    else:
+        print("invalid input")
