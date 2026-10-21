@@ -1,3 +1,5 @@
+tasks = []
+
 while True:
     print()
     print("----To-Do-List----")
@@ -9,6 +11,9 @@ while True:
 
     choice = input("enter your option")
     if choice == "1":
+        new_task = input("Enter your task:  ")
+        tasks.append(new_task)
+
         pass
     if choice == "2":
         pass
