@@ -20,3 +20,5 @@
   I will be learning condition in python
   >> What are conditions:
   condition is simply confirming if the input is true or false.
+  ## Today which is 21 october 
+  >> I am working on a to do list which deals with a user inputting his choice and selecting an option from the 4 listed below isf selected any the operation will be taken.
