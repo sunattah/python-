@@ -15,3 +15,9 @@ def string():
     g_type = type(g)
     print(g)
 string()
+
+
+def numbers(**numbers):
+    return numbers
+print(numbers())
+numbers()
