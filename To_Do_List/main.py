@@ -9,14 +9,18 @@ while True:
     print("4: Exit")
     print()
 
-    choice = input("enter your option")
+    choice = input("enter your option: ")
     if choice == "1":
         new_task = input("Enter your task:  ")
         tasks.append(new_task)
 
         pass
     if choice == "2":
-        pass
+        if tasks == "":
+            print("no task yet")
+        else:
+            for i in enumerate(tasks, start=1):
+                print(i)
     if choice == "3":
         pass
     if choice == "4":
