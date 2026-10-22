@@ -14,7 +14,7 @@ while True:
         new_task = input("Enter your task:  ")
         tasks.append(new_task)
 
-        pass
+        print("task added")
     if choice == "2":
         if tasks == "":
             print("no task yet")
