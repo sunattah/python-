@@ -22,7 +22,9 @@ while True:
             for i in enumerate(tasks, start=1):
                 print(i)
     if choice == "3":
-        pass
+        if tasks == "":
+            print("Nothing to delect")
+        
     if choice == "4":
         print("good bye and thank you")
         break
