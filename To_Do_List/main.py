@@ -16,13 +16,13 @@ while True:
 
         print("task added")
     elif choice == "2":
-        if tasks == "":
+        if len(tasks) == 0:
             print("no task yet")
         else:
             for i in enumerate(tasks, start=1):
                 print(i)
     elif choice == "3":
-        if tasks == "":
+        if not tasks:
             print("Nothing to delect")
         
     elif choice == "4":
