@@ -19,8 +19,8 @@ while True:
         if len(tasks) == 0:
             print("no task yet")
         else:
-            for i in enumerate(tasks, start=1):
-                print(i)
+            for num, task in enumerate(tasks, start=1):
+                print(f"{num}. {task}")
     elif choice == "3":
         if not tasks:
             print("Nothing to delect")
