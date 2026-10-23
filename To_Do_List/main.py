@@ -22,6 +22,8 @@ while True:
             for num, task in enumerate(tasks, start=1):
                 print(f"{num}. {task}")
     elif choice == "3":
+        del_tas = input("input the value to be delected:  ")
+        tasks.append(del_tas)
         if not tasks:
             print("Nothing to delect")
         else:
