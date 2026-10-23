@@ -24,6 +24,11 @@ while True:
     elif choice == "3":
         if not tasks:
             print("Nothing to delect")
+        else:
+            input_del = int(input("Enter your value:  "))
+            if input_del >= 1 and input_del >= len(tasks):
+                
+
         
     elif choice == "4":
         print("good bye and thank you")
