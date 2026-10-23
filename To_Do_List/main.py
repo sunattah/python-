@@ -27,11 +27,14 @@ while True:
         else:
             input_del = int(input("Enter your value:  "))
             if input_del >= 1 and input_del >= len(tasks):
-                
+                tasks[num-1]
+                print(f"delected {task}")
+            else:
+                print("invalid number")
 
         
     elif choice == "4":
         print("good bye and thank you")
         break
     else:
-        print("invalid input")
+        print("invalid option")
