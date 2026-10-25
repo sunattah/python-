@@ -22,6 +22,8 @@ while True:
             for num, task in enumerate(tasks, start=1):
                 print(f"{num}. {task}")
     elif choice == "3": 
+        # if not tasks:
+        #     print("Nothing to delect")
         try:
             input_del = int(input("Enter your value:  "))
             if input_del >= 1 and input_del <= len(tasks):
@@ -29,8 +31,7 @@ while True:
                 print(f"delected {removed}")
         except:
                 print("invalid number")
-        if not tasks:
-            print("Nothing to delect")
+
         # del_tas = input("input the value to be delected:  ")
         # tasks.append(del_tas)
        
