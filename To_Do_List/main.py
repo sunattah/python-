@@ -25,7 +25,7 @@ while True:
         try:
             input_del = int(input("Enter your value:  "))
             if input_del >= 1 and input_del <= len(tasks):
-                removed =tasks[input_del-1]
+                removed =tasks.pop(input_del-1)
                 print(f"delected {removed}")
         except:
                 print("invalid number")
