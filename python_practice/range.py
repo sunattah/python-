@@ -17,6 +17,11 @@
 #           print("wrong")
 # num()
        
-range_numbers = range(10)
+range_numbers = range(3,10,2)
 slice_num = range_numbers[:4]
 print(slice_num)
+print(range_numbers)
+
+r = range(0, 10, 2)
+print(4 in r)
+print(len(range_numbers))
