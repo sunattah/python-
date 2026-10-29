@@ -1,5 +1,8 @@
 filename = "sample.txt"
 
-open_file = open(filename, "r").read()
+with open(filename, "r") as f:
+    
+    text = f.read()
 
-print(filename[:200])
+
+print(text[:200])
