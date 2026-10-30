@@ -33,4 +33,23 @@ for word in words:
     text = text.replace("-", "")
 word_list = list(word_count.items())
 
-sorted_words = sorted(word_list, key=..., reverse=True)
+sorted_words = sorted(word_list, key=len, reverse=True)
+top_10 = sorted_words[:10]
+print("Top 10 words")
+
+for rank, (word, count) in enumerate(top_10, start=1):
+    print(f"{rank}. {word} - {count}")
+
+    letter_count = {}
+
+    for char in text:
+        if char.isalpha():
+            char = char.lower()
+        else:
+            continue
+        if char in letter_count:
+            letter_count[char] + 1
+        else:
+            letter_count[char] = 1
+            print(letter_count)
+            
