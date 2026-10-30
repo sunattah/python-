@@ -8,3 +8,7 @@ with open(filename, "r") as f:
 print(text[:200])
 
 word_count = {}
+words = text.split()
+
+for word in words:
+    if 
