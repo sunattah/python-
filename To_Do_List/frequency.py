@@ -52,4 +52,3 @@ for rank, (word, count) in enumerate(top_10, start=1):
         else:
             letter_count[char] = 1
             print(letter_count)
-            
