@@ -11,6 +11,8 @@ word_count = {}
 words = text.split()
 
 for word in words:
+    if len(word) == 0:
+        continue
     if word in word_count:
         word_count[word] + 1
     else:
@@ -29,3 +31,6 @@ for word in words:
     text = text.replace(")", "")
     text = text.replace("_", "")
     text = text.replace("-", "")
+word_list = list(word_count.items())
+
+sorted_words = sorted(word_list, key=..., reverse=True)
