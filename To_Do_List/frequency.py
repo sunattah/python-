@@ -15,3 +15,4 @@ for word in words:
         word_count[word] + 1
     else:
         word_count[word] = 1
+        print(word_count)
