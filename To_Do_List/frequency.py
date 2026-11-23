@@ -17,7 +17,7 @@ word_count = {}
 words = text.split()
 
 for word in words:
-    if word:  # skip empty strings
+    if word:  
         word_count[word] = word_count.get(word, 0) + 1
 
 sorted_words = sorted(word_count.items(), key=lambda item: item[1], reverse=True)
